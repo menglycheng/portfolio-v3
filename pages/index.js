@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import NavBar from "../components/Navbar";
 import Profile from "../components/Profile";
 import BtnProject from "../components/BtnProject";

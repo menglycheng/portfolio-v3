@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 import NavBar from "../../components/Navbar";
 import Project from "../../components/Project";
@@ -14,7 +13,7 @@ const index = () => {
         <div className="w-full pt-10">
           <h1 className="text-2xl text-left font-bold">My Project</h1>
           <div className="w-fit h-2 bg-blue-500 " />
-          
+
           <div className="mt-16">
             <Project />
           </div>
