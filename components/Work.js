@@ -5,7 +5,6 @@ import {
 import React from "react";
 
 const Work = ({ experiences }) => {
-  console.log(`==> ${experiences.experiences}`);
   return (
     <div className="w-full mt-16 text-left">
       <h2 className="font-bold text-lg">Work Experience</h2>

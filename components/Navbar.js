@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import MenuItems from "../utils/menuItems";
+import { useRouter } from "next/router";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Navbar = () => {

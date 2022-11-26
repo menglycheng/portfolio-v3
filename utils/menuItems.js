@@ -2,7 +2,7 @@ const MenuItems = [
   {
     id: 1,
     label: "Home",
-    url: "/",
+    url: "",
     active: true,
   },
   {
