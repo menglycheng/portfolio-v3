@@ -6,14 +6,8 @@ const query = groq`
     *[_type== "experience"]
     
 `;
-type Data = {
-  experiences: Experiences[];
-};
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  const experiences: Experiences[] = await sanityClient.fetch(query);
+export default async function handler(req, res) {
+  const experiences = await sanityClient.fetch(query);
   res.status(200).json({ experiences });
 }

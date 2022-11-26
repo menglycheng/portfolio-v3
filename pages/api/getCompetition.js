@@ -6,14 +6,8 @@ const query = groq`
     *[_type== "competition"]
     
 `;
-type Data = {
-  competition: Competition[],
-};
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  const competition: Competition[] = await sanityClient.fetch(query);
+export default async function handler(req, res) {
+  const competition = await sanityClient.fetch(query);
   res.status(200).json({ competition });
 }

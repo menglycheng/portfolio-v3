@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/about/index.js", "pages/about/index.js", "pages/api/getExperience.ts", "pages/api/getExperience.ts", "pages/api/getExperience.ts", "utils/menuItems.js", "utils/fetchExperience.js", "utils/fetchCompetition.js", "pages/index.js", "utils/fetchExperience.js", "pages/index.ts", "pages/index.ts", "utils/fetchExperience.js", "utils/fetchCompetition.js", "utils/menuItems.js", "pages/api/getExperience.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/about/index.js", "pages/about/index.js", "pages/api/getExperience.js", "pages/api/getCompetition.js", "pages/api/getExperience.js", "pages/api/getExperience.js", "pages/api/getExperience.js", "utils/menuItems.ts", "utils/fetchExperience.ts", "utils/fetchCompetition.ts", "pages/index.js", "utils/fetchExperience.ts", "pages/index.ts", "pages/index.ts", "utils/fetchExperience.ts", "utils/fetchCompetition.ts", "utils/menuItems.ts", "pages/api/getExperience.js", "pages/api/getCompetition.js"],
   "exclude": ["node_modules"]
 }
