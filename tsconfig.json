@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/about/index.js", "pages/about/index.js", "utils/fetchCompetition.js", "utils/fetchExperience.js", "utils/menuItems.js", "pages/_app.js", "pages/api/getExperience.js", "pages/api/getCompetition.js", "pages/api/getExperience.js", "pages/api/getExperience.js", "pages/api/getExperience.js", "utils/menuItems.js", "utils/fetchExperience.js", "utils/fetchCompetition.js", "pages/index.js", "utils/fetchExperience.js", "pages/index.ts", "pages/index.ts", "utils/fetchExperience.js", "utils/fetchCompetition.js", "utils/menuItems.js", "pages/api/getExperience.js", "pages/api/getCompetition.js", "pages/_app.js"],
+  "exclude": ["node_modules"]
+}

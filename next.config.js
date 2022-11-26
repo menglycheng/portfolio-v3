@@ -4,5 +4,4 @@ module.exports = {
     externalDir: true,
   },
   disableExperimentalFeaturesWarning: true,
-  reactStrictMode: true,
 };
