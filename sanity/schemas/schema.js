@@ -7,7 +7,8 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import experience from "./experience";
 import competition from "./competition";
 import project from "./project";
+import event from "./event";
 export default createSchema({
   name: "default",
-  types: schemaTypes.concat([experience, competition, project]),
+  types: schemaTypes.concat([experience, competition, project, event]),
 });

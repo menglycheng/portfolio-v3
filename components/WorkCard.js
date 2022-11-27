@@ -8,12 +8,6 @@ import {
 } from "@heroicons/react/24/outline";
 const WorkCard = ({ role, company, start_date, end_date, description }) => {
   const [isActive, setIsActive] = useState(false);
-
-  //   useLayoutEffect(() => {
-
-  //   }, [t]);
-  console.log(isActive);
-
   return (
     <div
       onClick={() => setIsActive(!isActive)}

@@ -3,6 +3,5 @@ export const fetchExperience = async () => {
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getExperience`
   );
   const experience = await res.json();
-  console.log(experience);
   return experience;
 };
