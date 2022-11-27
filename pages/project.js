@@ -1,8 +1,10 @@
 import Head from "next/head";
+import Event from "../components/Event";
 import NavBar from "../components/Navbar";
 import Project from "../components/Project";
+import { fetchEvent } from "../utils/fetchEvent";
 import { fetchProject } from "../utils/fetchProject";
-const index = ({ projects }) => {
+const index = ({ projects, event }) => {
   console.log(projects);
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
@@ -10,6 +12,8 @@ const index = ({ projects }) => {
         <title>メングリ | Project</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Event event={event} />
+
       <main className="md:max-w-screen-md flex w-full flex-1 flex-col items-center  px-20 text-center text-white">
         <NavBar />
         <div className="w-full pt-10">
@@ -28,11 +32,12 @@ const index = ({ projects }) => {
 export default index;
 export async function getServerSideProps() {
   const projects = await fetchProject();
-
+  const event = await fetchEvent();
   // console.log()
   return {
     props: {
       projects,
+      event,
     },
   };
 }

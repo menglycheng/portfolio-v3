@@ -5,8 +5,10 @@ import { BsFacebook, BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs";
 import { RocketLaunchIcon } from "@heroicons/react/24/outline";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { fetchCompetition } from "../utils/fetchCompetition";
+import { fetchEvent } from "../utils/fetchEvent";
+import Event from "../components/Event";
 
-const about = ({ competition }) => {
+const about = ({ competition, event }) => {
   const [text, count] = useTypewriter({
     words: [
       "Hello, I'm Mengly",
@@ -24,7 +26,7 @@ const about = ({ competition }) => {
         <title>メングリ | About</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Event event={event} />
       <main className="max-w-screen-md flex  flex-1 flex-col  md:px-20 px-10 text-white">
         <NavBar />
         <h1 className="text-2xl font-bold mt-16 mb-10 h-10 text-blue-500">
@@ -84,11 +86,12 @@ const about = ({ competition }) => {
 export default about;
 export async function getServerSideProps() {
   const competition = await fetchCompetition();
-
+  const event = await fetchEvent();
   // console.log()
   return {
     props: {
       competition,
+      event,
     },
   };
 }
