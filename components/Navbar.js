@@ -30,7 +30,7 @@ const Navbar = () => {
           {text} <Cursor cursorColor="white" />
         </span>
       </h2>
-      <div className="flex">
+      {/* <div className="flex">
         {MenuItems.map((item, index) => {
           return (
             <div key={item.id}>
@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };
