@@ -35,6 +35,5 @@ export async function getServerSideProps() {
     props: {
       experiences,
     },
-    revalidate: 10,
   };
 }
