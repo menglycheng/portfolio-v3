@@ -1,7 +1,9 @@
 import Head from "next/head";
 import NavBar from "../components/Navbar";
 import Project from "../components/Project";
-const index = () => {
+import { fetchProject } from "../utils/fetchProject";
+const index = ({ projects }) => {
+  console.log(projects);
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
       <Head>
@@ -15,7 +17,7 @@ const index = () => {
           <div className="w-fit h-2 bg-blue-500 " />
 
           <div className="mt-16">
-            <Project />
+            <Project projects={projects} />
           </div>
         </div>
       </main>
@@ -24,3 +26,13 @@ const index = () => {
 };
 
 export default index;
+export async function getServerSideProps() {
+  const projects = await fetchProject();
+
+  // console.log()
+  return {
+    props: {
+      projects,
+    },
+  };
+}
