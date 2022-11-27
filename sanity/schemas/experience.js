@@ -14,15 +14,29 @@ export default {
       type: "string",
     },
     {
-      name: "date",
-      title: "Date",
-      type: "string",
+      name: "start_date",
+      title: "Start Date",
+      type: "date",
+      options: {
+        dateFormat: "DD-MMM-YYYY",
+      },
+    },
+    {
+      name: "end_date",
+      title: "End Date",
+      type: "date",
+      options: {
+        dateFormat: "DD-MMM-YYYY",
+      },
     },
     {
       name: "description",
       title: "Description",
-      type: "string",
+      type: "array",
+      of: [{ name: "data", title: "Description", type: "text" }],
+      options: {
+        layout: "tags",
+      },
     },
   ],
-
 };

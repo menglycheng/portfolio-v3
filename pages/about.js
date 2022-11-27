@@ -16,6 +16,7 @@ const about = ({ competition }) => {
     loop: true,
     delaySpeed: 2000,
   });
+  // console.log()
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
@@ -46,12 +47,12 @@ const about = ({ competition }) => {
         {/* competition */}
         <div>
           <h1 className="text-xl font-bold pt-10">Competition I've join</h1>
-          <div className="pt-7">
+          <div className="pt-7 flex flex-row flex-wrap w-full ">
             {competition.competition.map((item, index) => (
               <div key={item._id}>
-                <div className="flex justify-center cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 items-center border border-blue-500 w-fit px-3 rounded-md">
-                  <RocketLaunchIcon className="w-5 h-5 mr-2" />
-                  <p>{item.name}</p>
+                <div className="flex m-1 justify-center cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 items-center border border-blue-500 w-fit px-3 rounded-md">
+                  <RocketLaunchIcon className="w-4 h-4 mr-2" />
+                  <p className="text-sm">{item.name}</p>
                 </div>
               </div>
             ))}

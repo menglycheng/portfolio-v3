@@ -1,6 +1,6 @@
 export const fetchCompetition = async () => {
   const res = await fetch(
-    `https://portfolio-v3-mengly19.vercel.app/api/getCompetition`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getCompetition`
   );
   const competition = await res.json();
 
