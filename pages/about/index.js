@@ -48,15 +48,12 @@ const about = ({ competition }) => {
           <h1 className="text-xl font-bold pt-10">Competition I've join</h1>
           <div className="pt-7">
             {competition.competition.map((item) => (
-              <>
-                <div
-                  key={item._id}
-                  className="flex justify-center cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 items-center border border-blue-500 w-fit px-3 rounded-md"
-                >
+              <div key={item._id}>
+                <div className="flex justify-center cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 items-center border border-blue-500 w-fit px-3 rounded-md">
                   <RocketLaunchIcon className="w-5 h-5 mr-2" />
                   <p>{item.name}</p>
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </div>

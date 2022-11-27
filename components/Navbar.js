@@ -24,7 +24,7 @@ const Navbar = () => {
     }
   }, []);
   return (
-    <navbar className="w-full flex justify-between mt-5">
+    <div className="w-full flex justify-between mt-5">
       <h2 className="text-white capitalize font-bold">
         <span>
           {text} <Cursor cursorColor="white" />
@@ -33,10 +33,9 @@ const Navbar = () => {
       <div className="flex">
         {MenuItems.map((item, index) => {
           return (
-            <>
+            <div key={item.id}>
               <Link
                 href={item.url}
-                key={item.id}
                 className={`px-3  ${
                   router.asPath === item.url
                     ? " underline decoration-wavy text-blue-500 "
@@ -45,11 +44,11 @@ const Navbar = () => {
               >
                 {item.label}
               </Link>
-            </>
+            </div>
           );
         })}
       </div>
-    </navbar>
+    </div>
   );
 };
 
