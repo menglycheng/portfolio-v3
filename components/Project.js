@@ -1,8 +1,4 @@
-import {
-  ChevronRightIcon,
-  CodeBracketIcon,
-
-} from "@heroicons/react/24/outline";
+import { ChevronRightIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import React from "react";
 
@@ -26,8 +22,10 @@ const Project = () => {
           href="/"
           className="flex justify-left items-center hover:border hover:bg-transparent hover:text-white hover:border-blue-500 w-fit rounded-md px-3 py-1 bg-blue-500 text-[#0a0d14]"
         >
-          <p className="text-sm ">View Project</p>
-          <ChevronRightIcon className="w-4 h-4" />
+          <a>
+            <p className="text-sm ">View Project</p>
+            <ChevronRightIcon className="w-4 h-4" />
+          </a>
         </Link>
       </div>
       <div className="mt-3 md:mt-0 ">
