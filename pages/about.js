@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
-import NavBar from "../../components/Navbar";
+import NavBar from "../components/Navbar";
 import { BsFacebook, BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs";
 import { RocketLaunchIcon } from "@heroicons/react/24/outline";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { fetchCompetition } from "../../utils/fetchCompetition";
+import { fetchCompetition } from "../utils/fetchCompetition";
 
 const about = ({ competition }) => {
   const [text, count] = useTypewriter({

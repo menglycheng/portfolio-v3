@@ -1,6 +1,6 @@
 import Head from "next/head";
-import NavBar from "../../components/Navbar";
-import Project from "../../components/Project";
+import NavBar from "../components/Navbar";
+import Project from "../components/Project";
 const index = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">

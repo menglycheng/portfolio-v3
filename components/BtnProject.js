@@ -5,7 +5,7 @@ import React from "react";
 const BtnProject = () => {
   return (
     <div className="text-left mt-10 ">
-      {/* <Link
+      <Link
         href="/project"
         className="border px-4 py-1 rounded-md border-blue-500 cursor-pointer flex justify-center items-center"
       >
@@ -13,7 +13,7 @@ const BtnProject = () => {
           <p className="text-sm">View My Project</p>
           <ChevronRightIcon className="ml-2 w-4 h-4" />
         </a>
-      </Link> */}
+      </Link>
     </div>
   );
 };
