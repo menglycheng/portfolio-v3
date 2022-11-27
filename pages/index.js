@@ -27,7 +27,7 @@ const Home = ({ experiences }) => {
 
 export default Home;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const experiences = await fetchExperience();
 
   // console.log()

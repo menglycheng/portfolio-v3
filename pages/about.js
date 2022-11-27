@@ -81,7 +81,7 @@ const about = ({ competition }) => {
 };
 
 export default about;
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const competition = await fetchCompetition();
 
   // console.log()
