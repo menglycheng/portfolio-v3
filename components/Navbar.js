@@ -42,7 +42,7 @@ const Navbar = () => {
                     : ""
                 }`}
               >
-                <a>{item.label}</a>
+                {item.label}
               </Link>
             </div>
           );
