@@ -37,7 +37,7 @@ const about = ({ competition }) => {
             Engineering.
           </p>
 
-          <p className="py-2">
+          <p className="py-2 ">
             Outside of Study and Intership, I love enjoying with nature, and I
             spend my free time exploring new place. Moreover I love playing
             sport such as football, frisbee. I think enjoying with nature and
@@ -50,7 +50,7 @@ const about = ({ competition }) => {
           <div className="pt-7 flex flex-row flex-wrap w-full ">
             {competition.competition.map((item, index) => (
               <div key={item._id}>
-                <div className="flex m-1 justify-center cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 items-center border border-blue-500 w-fit px-3 rounded-md">
+                <div className="flex m-1  justify-center cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 items-center border border-blue-500 w-fit px-3 rounded-md">
                   <RocketLaunchIcon className="w-4 h-4 mr-2" />
                   <p className="text-sm">{item.name}</p>
                 </div>

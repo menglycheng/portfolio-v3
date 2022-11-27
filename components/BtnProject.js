@@ -7,7 +7,7 @@ const BtnProject = () => {
     <div className="text-left mt-10 ">
       <Link
         href="/project"
-        className="border px-4 py-1 rounded-md border-blue-500 cursor-pointer flex justify-center items-center"
+        className="border px-4 py-1 rounded-md hover:bg-blue-500 hover:text-white border-blue-500 cursor-pointer flex justify-center items-center"
       >
         <p className="text-sm">View My Project</p>
         <ChevronRightIcon className="ml-2 w-4 h-4" />

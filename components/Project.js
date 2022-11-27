@@ -16,7 +16,7 @@ const Project = ({ projects }) => {
               <h1 className="text-xl font-bold">{name}</h1>
             </div>
 
-            <p className="text-sm py-3">{description}</p>
+            <p className="text-sm py-3 text-gray-400">{description}</p>
 
             <Link
               href={url ? url : "/project"}
