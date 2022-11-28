@@ -51,9 +51,6 @@ const Navbar = () => {
             );
           })}
         </div>
-        <div>
-          <Bars3Icon />
-        </div>
       </div>
     </div>
   );
