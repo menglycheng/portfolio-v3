@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Event from "../components/Event";
+import Footer from "../components/Footer";
 import NavBar from "../components/Navbar";
 import Project from "../components/Project";
 import { fetchEvent } from "../utils/fetchEvent";
@@ -25,6 +26,7 @@ const index = ({ projects, event }) => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

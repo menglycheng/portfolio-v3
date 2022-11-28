@@ -7,6 +7,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { fetchCompetition } from "../utils/fetchCompetition";
 import { fetchEvent } from "../utils/fetchEvent";
 import Event from "../components/Event";
+import Footer from "../components/Footer";
 
 const about = ({ competition, event }) => {
   const [text, count] = useTypewriter({
@@ -79,6 +80,7 @@ const about = ({ competition, event }) => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

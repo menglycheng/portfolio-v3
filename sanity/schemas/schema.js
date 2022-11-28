@@ -8,7 +8,14 @@ import experience from "./experience";
 import competition from "./competition";
 import project from "./project";
 import event from "./event";
+import personalInfo from "./personalInfo";
 export default createSchema({
   name: "default",
-  types: schemaTypes.concat([experience, competition, project, event]),
+  types: schemaTypes.concat([
+    personalInfo,
+    experience,
+    competition,
+    project,
+    event,
+  ]),
 });
