@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import MenuItems from "../utils/menuItems";
 import { useRouter } from "next/router";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { Bars2Icon, Bars3Icon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
   const router = useRouter();
@@ -24,16 +25,16 @@ const Navbar = () => {
     }
   }, []);
   return (
-    <div className="w-full flex justify-between mt-5">
+    <div className="w-full flex justify-between  md:first:items-center mt-5">
       <h2 className="text-white capitalize font-bold">
         <span>
           {text} <Cursor cursorColor="white" />
         </span>
       </h2>
-      <div className="flex">
+      <div className="flex flex-col justify-end text-right md:flex-row   ">
         {MenuItems.map((item, index) => {
           return (
-            <div key={item.id}>
+            <div key={item.id} className="my-1 md:my-0">
               <Link
                 href={item.url}
                 className={`px-3  ${

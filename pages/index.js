@@ -18,7 +18,7 @@ const Home = ({ personalInfo, experiences, event }) => {
       </Head>
 
       <Event event={event} />
-      <main className="md:max-w-screen-md flex w-full flex-1 flex-col items-center  px-20 text-center text-white">
+      <main className="md:max-w-screen-md flex w-full flex-1 flex-col items-center md:px-20 px-10 text-center text-white">
         <NavBar />
         <Profile personalInfo={personalInfo} />
         <BtnProject />
