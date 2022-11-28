@@ -1,11 +1,9 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import MenuItems from "../utils/menuItems";
-import { navbarState } from "../atoms/NavbarAtom";
 import { useRouter } from "next/router";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { Bars3Icon } from "@heroicons/react/24/outline";
-
 
 const Navbar = () => {
   const router = useRouter();
