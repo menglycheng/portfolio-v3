@@ -36,9 +36,15 @@ const Navbar = () => {
       <div className=" md:hidden flex flex-col">
         <div className="w-full  flex justify-end px-3 ">
           {isOpen ? (
-            <XMarkIcon className="w-6 h-6 cursor-pointer" onClick={() => setIsOpen(!isOpen)} />
+            <XMarkIcon
+              className="w-6 h-6 cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            />
           ) : (
-            <Bars3Icon className="w-6 h-6 cursor-pointer" onClick={() => setIsOpen(!isOpen)} />
+            <Bars3Icon
+              className="w-6 h-6 cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            />
           )}
         </div>
         <Transition
@@ -50,7 +56,6 @@ const Navbar = () => {
           leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
-          onClose={setIsOpen}
         >
           {(ref) => (
             <div
