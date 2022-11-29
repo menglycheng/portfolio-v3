@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
     "@portabletext/react": "^2.0.0",
     "@sanity/image-url": "^1.0.1",
@@ -18,7 +19,7 @@
     "react-icons": "^4.6.0",
     "react-moment": "^1.1.2",
     "react-simple-typewriter": "^5.0.1",
-    "recoil": "0.7.5"
+    "recoil": "^0.7.6"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
