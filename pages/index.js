@@ -31,11 +31,14 @@ const Home = ({ personalInfo, experiences, event }) => {
 
 export default Home;
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ req, res }) {
   const experiences = await fetchExperience();
   const event = await fetchEvent();
   const personalInfo = await fetchPersonalInfo();
-
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
   // console.log()
   return {
     props: {
