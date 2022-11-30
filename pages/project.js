@@ -32,10 +32,14 @@ const index = ({ projects, event }) => {
 };
 
 export default index;
-export async function getServerSideProps() {
+export async function getServerSideProps({ req, res }) {
   const projects = await fetchProject();
   const event = await fetchEvent();
 
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
   // console.log()
   return {
     props: {

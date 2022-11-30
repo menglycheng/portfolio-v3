@@ -86,10 +86,15 @@ const about = ({ competition, event }) => {
 };
 
 export default about;
-export async function getServerSideProps() {
+export async function getServerSideProps({ req, res }) {
   const competition = await fetchCompetition();
   const event = await fetchEvent();
   // console.log()
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
+
   return {
     props: {
       competition,
