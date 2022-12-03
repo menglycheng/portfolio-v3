@@ -8,6 +8,7 @@ import { fetchCompetition } from "../utils/fetchCompetition";
 import { fetchEvent } from "../utils/fetchEvent";
 import Event from "../components/Event";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 const about = ({ competition, event }) => {
   const [text, count] = useTypewriter({
@@ -65,18 +66,34 @@ const about = ({ competition, event }) => {
         <div>
           <h1 className="text-lg pt-16">Get In Touch With Me</h1>
           <div className="flex justify-left items-center pt-5 ">
-            <div className="border p-1 w-fit rounded-md mr-2 cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500   border-blue-500">
+            <Link
+              target="_blank"
+              href="https://www.facebook.com/menglycheng"
+              className="border p-1 w-fit rounded-md mr-2 cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500   border-blue-500"
+            >
               <BsFacebook className="mx-2 w-5 h-5" />
-            </div>
-            <div className="border p-1 w-fit rounded-md mr-2 cursor-pointer border-blue-500 hover:text-[#0a0d14] hover:bg-blue-500 ">
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.instagram.com/iammengly/"
+              className="border p-1 w-fit rounded-md mr-2 cursor-pointer border-blue-500 hover:text-[#0a0d14] hover:bg-blue-500 "
+            >
               <BsInstagram className="mx-2 w-5 h-5" />
-            </div>
-            <div className="border p-1 w-fit rounded-md mr-2 border-blue-500 cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 ">
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/in/menglycheng"
+              className="border p-1 w-fit rounded-md mr-2 border-blue-500 cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 "
+            >
               <BsLinkedin className="mx-2 w-5 h-5" />
-            </div>
-            <div className="border p-1 w-fit rounded-md mr-2 border-blue-500 cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 ">
+            </Link>
+            <Link
+              target="_blank"
+              href="https://github.com/menglycheng"
+              className="border p-1 w-fit rounded-md mr-2 border-blue-500 cursor-pointer hover:text-[#0a0d14] hover:bg-blue-500 "
+            >
               <BsGithub className="mx-2 w-5 h-5" />
-            </div>
+            </Link>
           </div>
         </div>
       </main>
