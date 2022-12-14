@@ -19,6 +19,11 @@ export default {
       type: "url",
     },
     {
+      name: "codeUrl",
+      title: "Code url",
+      type: "url",
+    },
+    {
       name: "image",
       title: "Image",
       type: "image",
