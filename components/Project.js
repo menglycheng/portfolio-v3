@@ -21,13 +21,14 @@ const Project = ({ projects }) => {
               <p className="text-sm py-3 text-gray-400">{description}</p>
               <div className="flex flex-row items-center">
                 <Link
+                  target="_blank"
                   href={url ? url : "/project"}
                   className="flex justify-left mt-4 items-center hover:border hover:bg-transparent hover:text-white hover:border-blue-500 w-fit rounded-md px-3 py-1 bg-blue-500 text-[#0a0d14]"
                 >
                   <p className="text-sm ">View Project</p>
                   <ChevronRightIcon className="w-4 h-4" />
                 </Link>
-                <Link href={codeUrl ? codeUrl : "/project"}>
+                <Link target="_blank" href={codeUrl ? codeUrl : "/project"}>
                   <BsGithub className="w-6 h-6 mt-4 ml-4 hover:text-blue-500 cursor-pointer" />
                 </Link>
               </div>
