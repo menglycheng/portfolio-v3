@@ -18,7 +18,12 @@ const Profile = ({ personalInfo }) => {
         </div>
         <div className="pt-5 text-sm">
           <p className="text-gray-400">
+            <span className="text-4xl p-1">&#8220;</span>
             {personalInfo.personalInfo.description}
+            <span className="text-4xl p-1">&rdquo;</span>
+          </p>
+          <p className="text-right text-gray-400 italic pr-6 pt-2">
+            {personalInfo.personalInfo?.by}
           </p>
         </div>
       </div>

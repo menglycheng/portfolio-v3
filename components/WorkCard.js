@@ -21,7 +21,7 @@ const WorkCard = ({ role, company,intern, start_date, end_date, description }) =
           {role} @ <span className="text-blue-500">{company}</span>
         </h1>
       </div>
-      {intern && <p className="text-sm text-blue-500">( Internship )</p>}
+      {intern && <p className="text-sm text-blue-500 uppercase">[ Intern ]</p>}
       <div className="flex justify-between items-center">
         <p className="text-xs text-gray-400">
           <Moment format="DD-MMM-YYYY">{start_date}</Moment> -{" "}

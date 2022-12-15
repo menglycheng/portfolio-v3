@@ -24,5 +24,10 @@ export default {
       title: "Description",
       type: "text",
     },
+    {
+      name: "by",
+      title: "by",
+      type: "text",
+    },
   ],
 };
