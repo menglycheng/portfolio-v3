@@ -11,12 +11,13 @@ const Work = ({ experiences }) => {
       <h2 className="font-bold text-lg">Work Experience</h2>
       <div className="mt-5">
         {experiences.experiences.map(
-          ({ _id, role, company, start_date, end_date, description }) => {
+          ({ _id, role, company, start_date, end_date, description,intern }) => {
             return (
               <WorkCard
                 key={_id}
                 role={role}
                 company={company}
+                intern={intern}
                 start_date={start_date}
                 end_date={end_date}
                 end={end_date}

@@ -6,7 +6,7 @@ import {
   ChevronUpIcon,
   InformationCircleIcon,
 } from "@heroicons/react/24/outline";
-const WorkCard = ({ role, company, start_date, end_date, description }) => {
+const WorkCard = ({ role, company,intern, start_date, end_date, description }) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <div
@@ -21,6 +21,7 @@ const WorkCard = ({ role, company, start_date, end_date, description }) => {
           {role} @ <span className="text-blue-500">{company}</span>
         </h1>
       </div>
+      {intern && <p className="text-sm text-blue-500">( Internship )</p>}
       <div className="flex justify-between items-center">
         <p className="text-xs text-gray-400">
           <Moment format="DD-MMM-YYYY">{start_date}</Moment> -{" "}
@@ -32,6 +33,7 @@ const WorkCard = ({ role, company, start_date, end_date, description }) => {
             <span>Present</span>
           )}
         </p>
+
         <div>
           {isActive ? (
             <ChevronUpIcon

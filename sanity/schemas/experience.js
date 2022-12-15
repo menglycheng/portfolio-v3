@@ -14,6 +14,11 @@ export default {
       type: "string",
     },
     {
+      title: "Intern?",
+      name: "intern",
+      type: "boolean",
+    },
+    {
       name: "start_date",
       title: "Start Date",
       type: "date",
