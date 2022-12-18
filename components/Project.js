@@ -15,7 +15,7 @@ const Project = ({ projects }) => {
                 <div className="bg-blue-500 w-fit p-1 rounded-md my-2 text-[#0a0d14]">
                   <CodeBracketIcon className="w-5 h-5 " />
                 </div>
-                <h1 className="text-xl font-bold">{name}</h1>
+                <h1 className="text-xl font-bold text-white">{name}</h1>
               </div>
 
               <p className="text-sm py-3 text-gray-400">{description}</p>

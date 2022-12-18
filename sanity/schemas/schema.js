@@ -9,6 +9,7 @@ import competition from "./competition";
 import project from "./project";
 import event from "./event";
 import personalInfo from "./personalInfo";
+import aboutProfile from "./aboutProfile";
 export default createSchema({
   name: "default",
   types: schemaTypes.concat([
@@ -17,5 +18,6 @@ export default createSchema({
     competition,
     project,
     event,
+    aboutProfile,
   ]),
 });

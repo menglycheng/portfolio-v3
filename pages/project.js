@@ -17,16 +17,16 @@ const index = ({ projects, event }) => {
 
       <main className="md:max-w-screen-md flex w-full flex-1 flex-col mb-10 items-center  md:px-20 px-10 text-center text-white">
         <NavBar />
-        <div className="w-full pt-10">
+        <div className="w-full pt-10 text-blue-500">
           <h1 className="text-2xl text-left font-bold">My Project</h1>
           <div className="w-fit h-2 bg-blue-500 " />
 
-          <div className="mt-16">
+          <div className="mt-10">
             <Project projects={projects} />
           </div>
         </div>
       </main>
-      <Footer  />
+      <Footer />
     </div>
   );
 };
