@@ -28,7 +28,7 @@ const about = ({ competition, event, aboutProfile }) => {
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
       <Head>
         <title>メングリ | About</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <Event event={event} />
       <main className="max-w-screen-md flex  flex-1 flex-col  md:px-20 px-10 text-white">

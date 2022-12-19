@@ -14,7 +14,7 @@ const Home = ({ personalInfo, experiences, event }) => {
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
       <Head>
         <title>メングリ</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
 
       <Event event={event} />
