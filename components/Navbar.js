@@ -17,7 +17,7 @@ const Navbar = () => {
   });
   useEffect(() => {
     const time = new Date().getHours();
-    if (time >= 1 && time <= 12) {
+    if (time >= 0 && time <= 12) {
       setGreeting(["Good Morning", "អរុណសួស្ដី", "おはよう"]);
     } else if (time > 12 && time <= 18) {
       setGreeting(["Good Afternoon", "ទិវាសួស្តី", "こんにちは"]);
