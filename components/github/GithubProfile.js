@@ -6,7 +6,7 @@ const GithubProfile = ({ profile }) => {
   console.log(profile);
   return (
     <div className="flex flex-col justify-center items-center">
-      {/* <img
+      <img
         src={profile.avatar_url}
         alt="github profile"
         className="rounded-full w-32"
@@ -31,7 +31,7 @@ const GithubProfile = ({ profile }) => {
             <p className="text-xs mt-1">Following</p>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

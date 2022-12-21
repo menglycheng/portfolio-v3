@@ -13,7 +13,7 @@ import { fetchEvent } from "../utils/fetchEvent";
 import { fetchProject } from "../utils/fetchProject";
 import { fetchProfile } from "../utils/fetchProfile";
 import { fetchRepo } from "../utils/fetchRepo";
-const index = ({ projects, event, profile }) => {
+const index = ({ projects, event, profile, repos }) => {
   const [open, setOpen] = useState(false);
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
@@ -47,7 +47,7 @@ const index = ({ projects, event, profile }) => {
           <div className="w-fit h-2 bg-blue-500 " />
           <div className="mt-10">
             {open ? (
-              <Github profile={profile} />
+              <Github profile={profile} repos={repos} />
             ) : (
               <Project projects={projects} />
             )}
@@ -64,6 +64,7 @@ export async function getServerSideProps({ req, res }) {
   const projects = await fetchProject();
   const event = await fetchEvent();
   const profile = await fetchProfile();
+  const repos = await fetchRepo();
 
   res.setHeader(
     "Cache-Control",
@@ -75,6 +76,7 @@ export async function getServerSideProps({ req, res }) {
       projects,
       event,
       profile,
+      repos,
     },
   };
 }

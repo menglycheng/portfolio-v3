@@ -2,11 +2,11 @@ import React from "react";
 import GithubProfile from "./github/GithubProfile";
 import Repo from "./github/Repo";
 
-const Github = ({ profile }) => {
+const Github = ({ profile, repos }) => {
   return (
     <div>
       <GithubProfile profile={profile} />
-      {/* <Repo repos={repos} /> */}
+      <Repo repos={repos} />
     </div>
   );
 };
