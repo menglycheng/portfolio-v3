@@ -1,12 +1,20 @@
+import {
+  ArrowsPointingInIcon,
+  ArrowsPointingOutIcon,
+} from "@heroicons/react/24/outline";
 import Head from "next/head";
+import { useState } from "react";
+import Github from "../components/Github";
 import Event from "../components/Event";
 import Footer from "../components/Footer";
 import NavBar from "../components/Navbar";
 import Project from "../components/Project";
 import { fetchEvent } from "../utils/fetchEvent";
 import { fetchProject } from "../utils/fetchProject";
-const index = ({ projects, event }) => {
-  console.log(projects);
+import { fetchProfile } from "../utils/fetchProfile";
+import { fetchRepo } from "../utils/fetchRepo";
+const index = ({ projects, event, profile }) => {
+  const [open, setOpen] = useState(false);
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
       <Head>
@@ -18,11 +26,31 @@ const index = ({ projects, event }) => {
       <main className="md:max-w-screen-md flex w-full flex-1 flex-col mb-10 items-center  md:px-20 px-10 text-center text-white">
         <NavBar />
         <div className="w-full pt-10 text-blue-500">
-          <h1 className="text-2xl text-left font-bold">My Project</h1>
+          <div className="flex flex-row justify-between items-center">
+            <h1 className="text-2xl text-left font-bold">My Project</h1>
+            {open ? (
+              <div className="duration-700 flex">
+                <ArrowsPointingInIcon
+                  onClick={() => setOpen(false)}
+                  className="w-5 h-5 text-white cursor-pointer "
+                />
+              </div>
+            ) : (
+              <div>
+                <ArrowsPointingOutIcon
+                  onClick={() => setOpen(true)}
+                  className="w-5 h-5 text-white cursor-pointer"
+                />
+              </div>
+            )}
+          </div>
           <div className="w-fit h-2 bg-blue-500 " />
-
           <div className="mt-10">
-            <Project projects={projects} />
+            {open ? (
+              <Github profile={profile} />
+            ) : (
+              <Project projects={projects} />
+            )}
           </div>
         </div>
       </main>
@@ -35,6 +63,7 @@ export default index;
 export async function getServerSideProps({ req, res }) {
   const projects = await fetchProject();
   const event = await fetchEvent();
+  const profile = await fetchProfile();
 
   res.setHeader(
     "Cache-Control",
@@ -45,6 +74,7 @@ export async function getServerSideProps({ req, res }) {
     props: {
       projects,
       event,
+      profile,
     },
   };
 }

@@ -9,7 +9,10 @@ const Project = ({ projects }) => {
     <>
       {projects.project.map(
         ({ _id, name, description, url, image, codeUrl }) => (
-          <div className="flex flex-col my-4 md:flex-row  border border-blue-500 p-5 rounded-md my-">
+          <div
+            key={_id}
+            className="flex flex-col my-4 md:flex-row  border border-blue-500 p-5 rounded-md my-"
+          >
             <div className="text-left md:w-[800px] w-full mr-5 ">
               <div className="">
                 <div className="bg-blue-500 w-fit p-1 rounded-md my-2 text-[#0a0d14]">
