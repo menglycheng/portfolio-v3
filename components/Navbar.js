@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
   return (
     <div className="w-full flex justify-between  md:first:items-center mt-5">
-      <h2 className="text-white capitalize font-bold">
+      <h2 className="text-white capitalize font-bold h-2">
         <span>
           {text} <Cursor cursorColor="white" />
         </span>
