@@ -39,7 +39,7 @@ export async function getServerSideProps({ req, res }) {
     "Cache-Control",
     "public, s-maxage=10, stale-while-revalidate=59"
   );
-  // console.log()
+  console.log("done .. ");
   return {
     props: {
       experiences,

@@ -27,7 +27,9 @@ const index = ({ projects, event, profile, repos }) => {
         <NavBar />
         <div className="w-full pt-10 text-blue-500">
           <div className="flex flex-row justify-between items-center">
-            <h1 className="text-2xl text-left font-bold">My Project</h1>
+            <h1 className="text-2xl text-left font-bold  underline-offset-[13px] decoration-gray-500 underline tracking-widest decoration-dashed ">
+              {open ? " " : "My Project "}
+            </h1>
             {open ? (
               <div className="duration-700 flex">
                 <ArrowsPointingInIcon

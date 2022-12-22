@@ -8,10 +8,20 @@ import WorkCard from "./WorkCard";
 const Work = ({ experiences }) => {
   return (
     <div className="w-full mt-16 text-left">
-      <h2 className="font-bold text-lg">Work Experience</h2>
+      <h2 className="font-bold text-lg pb-8 underline-offset-[15px] decoration-gray-500 underline tracking-widest decoration-dashed">
+        Work Experience
+      </h2>
       <div className="mt-5">
         {experiences.experiences.map(
-          ({ _id, role, company, start_date, end_date, description,intern }) => {
+          ({
+            _id,
+            role,
+            company,
+            start_date,
+            end_date,
+            description,
+            intern,
+          }) => {
             return (
               <WorkCard
                 key={_id}

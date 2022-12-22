@@ -9,11 +9,13 @@ const RepoCard = ({ repo }) => {
     <Link
       href={repo.html_url}
       target="_blank"
-      className="flex flex-col w-full md:w-72 border justify-between m-2 border-blue-500 text-white rounded-sm p-4 "
+      className="flex flex-col w-full justify-between"
     >
       <div className="flex flex-row items-center h-fit">
         <BookmarkIcon className="w-4 h-4 mr-3" />
-        <h1 className="text-white text-lg">{repo.name}</h1>
+        <h1 className="text-white text-lg  truncate capitalize ">
+          {repo.name.replaceAll("_", " ").replaceAll("-", " ")}
+        </h1>
       </div>
       <div className="mt-2 h-fit flex flex-col">
         <p className="text-xs text-gray-500">{repo.description}</p>
@@ -26,7 +28,7 @@ const RepoCard = ({ repo }) => {
           />
           <p className="text-xs text-white">{repo.language}</p>
         </div>
-        <p className="text-xs text-white">{repo.size}KB</p>
+        <p className="text-xs text-white">{repo.size.toLocaleString()} KB</p>
       </div>
     </Link>
   );

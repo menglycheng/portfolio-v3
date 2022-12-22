@@ -1,9 +1,9 @@
 import { CalendarDaysIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 import React from "react";
 import Moment from "react-moment";
 
 const GithubProfile = ({ profile }) => {
-  console.log(profile);
   return (
     <div className="flex flex-col justify-center items-center">
       <img
@@ -15,7 +15,9 @@ const GithubProfile = ({ profile }) => {
         <h1 className="text-white mt-3 font-bold text-lg">
           {profile.name.replace("_", " ")}
         </h1>
-        <p>@{profile.login}</p>
+        <Link href={profile.html_url} target="_blank">
+          @{profile.login}
+        </Link>
 
         <div className="flex flex-row mt-4 text-white items-center justify-center flex-wrap">
           <div className="border border-blue-500 uppercase text-sm w-28 m-1 py-1 rounded-md">
