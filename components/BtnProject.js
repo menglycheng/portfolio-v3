@@ -4,7 +4,7 @@ import React from "react";
 
 const BtnProject = () => {
   return (
-    <div className="text-left mt-10 ">
+    <div className=" mt-10  ">
       <Link
         href="/project"
         className="border px-4 py-1 rounded-md hover:bg-blue-500 hover:text-white border-blue-500 cursor-pointer flex justify-center items-center"

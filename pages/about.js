@@ -25,7 +25,7 @@ const about = ({ competition, event, aboutProfile }) => {
   // console.log()
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
+    <div className="flex min-h-screen flex-col font-poppins  items-center justify-center py-2 bg-[#0a0d14]">
       <Head>
         <title>メングリ | About</title>
         <link rel="icon" href="/logo.png" />

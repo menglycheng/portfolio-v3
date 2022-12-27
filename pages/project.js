@@ -16,7 +16,7 @@ import { fetchRepo } from "../utils/fetchRepo";
 const index = ({ projects, event, profile, repos }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
+    <div className="flex min-h-screen font-poppins  flex-col items-center justify-center py-2 bg-[#0a0d14]">
       <Head>
         <title>メングリ | Project</title>
         <link rel="icon" href="/logo.png" />

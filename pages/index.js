@@ -11,7 +11,7 @@ import { fetchPersonalInfo } from "../utils/fetchPersonalInfo";
 
 const Home = ({ personalInfo, experiences, event }) => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-[#0a0d14]">
+    <div className="flex min-h-screen font-poppins flex-col items-center justify-center py-2 bg-[#0a0d14]">
       <Head>
         <title>メングリ</title>
         <link rel="icon" href="/logo.png" />
