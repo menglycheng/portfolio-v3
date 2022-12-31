@@ -16,11 +16,11 @@ const Profile = ({ personalInfo }) => {
             {personalInfo.personalInfo.location}
           </p>
         </div>
-        <div className="pt-5 text-sm">
+        <div className="pt-5 text-xs md:text-sm">
           <p className="text-gray-400">
-            <span className="text-4xl p-1">&#8220;</span>
+            <span className="text-2xl md:text-4xl p-1">&#8220;</span>
             {personalInfo.personalInfo.description}
-            <span className="text-4xl p-1">&rdquo;</span>
+            <span className="text-2xl md:text-4xl p-1">&rdquo;</span>
           </p>
           <p className="text-right text-gray-400 italic pr-6 pt-2">
             {personalInfo.personalInfo?.by}

@@ -16,7 +16,7 @@ const Repo = ({ repos }) => {
     const sortProperty = map[type];
     const sorted = repos
       .filter((repo) => !repo.fork)
-      .sort((a, b) => b[sortProperty] - a[sortProperty])
+      .sort((a, b) => b[sortProperty] - a[sortProperty]);
 
     setTopRepos(sorted);
   };
