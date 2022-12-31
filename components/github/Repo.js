@@ -8,7 +8,6 @@ const Repo = ({ repos }) => {
   // const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const getTopRepos = (type) => {
-    const LIMIT = 20;
     const map = {
       stars: "stargazers_count",
       forks: "forks_count",
@@ -18,7 +17,6 @@ const Repo = ({ repos }) => {
     const sorted = repos
       .filter((repo) => !repo.fork)
       .sort((a, b) => b[sortProperty] - a[sortProperty])
-      .slice(0, LIMIT);
 
     setTopRepos(sorted);
   };
