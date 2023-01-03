@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Event = ({ event }) => {
-  const isPublished = event.event.published;
-  //   const [text, count] = useTypewriter({
-  //     words: [event.event.name],
-  //     loop: false,
-  //   });
+  const isPublished = event.event === null ? false : event.event.published;
 
   return (
     <>
