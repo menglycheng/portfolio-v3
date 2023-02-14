@@ -67,6 +67,7 @@ export async function getServerSideProps({ req, res }) {
   const event = await fetchEvent();
   const profile = await fetchProfile();
   const repos = await fetchRepo();
+  
 
   res.setHeader(
     "Cache-Control",

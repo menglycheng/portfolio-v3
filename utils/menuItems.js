@@ -17,6 +17,12 @@ const MenuItems = [
     url: "/project",
     active: false,
   },
+  {
+    id: 3,
+    label: "Gallery",
+    url: "/gallery",
+    active: false,
+  },
 ];
 
 export default MenuItems;

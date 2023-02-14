@@ -10,6 +10,8 @@ import project from "./project";
 import event from "./event";
 import personalInfo from "./personalInfo";
 import aboutProfile from "./aboutProfile";
+import skill from "./skill";
+import gallery from "./gallery";
 export default createSchema({
   name: "default",
   types: schemaTypes.concat([
@@ -19,5 +21,7 @@ export default createSchema({
     project,
     event,
     aboutProfile,
+    skill,
+    gallery,
   ]),
 });
