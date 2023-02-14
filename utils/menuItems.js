@@ -18,7 +18,7 @@ const MenuItems = [
     active: false,
   },
   {
-    id: 3,
+    id: 4,
     label: "Gallery",
     url: "/gallery",
     active: false,

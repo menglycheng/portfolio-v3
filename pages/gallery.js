@@ -18,7 +18,7 @@ const gallery = ({ event, gallery }) => {
   return (
     <div className="flex min-h-screen font-poppins  flex-col items-center justify-center py-2 bg-[#0a0d14]">
       <Head>
-        <title>メングリ | Project</title>
+        <title>メングリ | Gallery</title>
         <link rel="icon" href="/logo.png" />
       </Head>
       <Event event={event} />
@@ -34,15 +34,13 @@ const gallery = ({ event, gallery }) => {
             columnClassName="px-2 py-2 mb-4 w-full lg:w-1/3 md:w-1/2 sm:w-full"
           >
             {gallery.gallery.map((photo, index) => (
-              <div className="my-3" key={index}>
-                <img
-                  src={urlFor(photo.image).url()}
-                  className="w-full h-auto rounded-md"
-                />
-              </div>
+              <img
+                key={index}
+                src={urlFor(photo.image).url()}
+                className="w-full my-3 h-auto rounded-md"
+              />
             ))}
           </Masonry>
-          
         </div>
       </main>
     </div>

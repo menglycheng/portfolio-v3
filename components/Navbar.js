@@ -7,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog, Transition } from "@headlessui/react";
 const Navbar = () => {
   const router = useRouter();
-  const [greeting, setGreeting] = useState([]);
+  const [greeting, setGreeting] = useState(["Mengly"]);
   const [isOpen, setIsOpen] = useState(false);
 
   const [text, count] = useTypewriter({
@@ -64,7 +64,7 @@ const Navbar = () => {
             >
               {MenuItems.map((item, index) => {
                 return (
-                  <div key={item.id} className="my-1 md:my-0">
+                  <div key={index} className="my-1 md:my-0">
                     <Link
                       href={item.url}
                       className={`px-3  ${
