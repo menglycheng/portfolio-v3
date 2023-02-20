@@ -11,10 +11,9 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 import { fetchAboutProfile } from "../utils/fetchAboutProfile";
 import AboutProfile from "../components/AboutProfile";
-import Skills from "../components/Skills";
 import { fetchSkill } from "../utils/fetchSkill";
 
-const about = ({ competition, event, aboutProfile, skill }) => {
+const about = ({ competition, event, aboutProfile }) => {
   const [text, count] = useTypewriter({
     words: [
       "Hello, I'm Mengly",
@@ -53,11 +52,7 @@ const about = ({ competition, event, aboutProfile, skill }) => {
             sport when i have free time can brain more creative.
           </p>
         </div>
-        {/* Skills  */}
-        {/* <div>
-          <h1 className="text-xl font-bold pt-10">My Skills</h1>
-          <Skills skill={skill} />
-        </div> */}
+
         {/* competition */}
         <div>
           <h1 className="text-xl font-bold pt-10">Competition I've join</h1>
@@ -117,7 +112,6 @@ export async function getServerSideProps({ req, res }) {
   const competition = await fetchCompetition();
   const event = await fetchEvent();
   const aboutProfile = await fetchAboutProfile();
-  const skill = await fetchSkill();
   // console.log()
   res.setHeader(
     "Cache-Control",
@@ -129,7 +123,6 @@ export async function getServerSideProps({ req, res }) {
       competition,
       event,
       aboutProfile,
-      skill,
     },
   };
 }
